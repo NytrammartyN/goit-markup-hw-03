@@ -261,6 +261,7 @@ ul {
   border: 1px solid #eeeeee;
   border-top: transparent;
   padding: 20px 18px;
+  margin-top: -3px;
 }
 
 .our_project_title {
