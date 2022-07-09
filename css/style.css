@@ -29,7 +29,7 @@
 /* ----------reset styles----------- */
 .link {
   text-decoration: none;
-  color: currentColor;
+  color: inherit;
 }
 .list {
   list-style: none;
@@ -54,9 +54,14 @@ ul {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  /*outline: 2px solid red;*/
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*outline: 2px solid red;*/
+
 /* -------------Header SECT------------- */
 .header {
   border-bottom: 1px solid #ececec;
@@ -108,7 +113,7 @@ ul {
   display: flex;
   margin-left: auto;
 }
-.herader_contact_item {
+.header_contact_item + .header_contact_item {
   margin-left: 50px;
 }
 
@@ -118,7 +123,8 @@ ul {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--other-text-color);
-  padding: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: block;
 }
 
@@ -142,7 +148,7 @@ ul {
   padding-bottom: 200px;
   text-align: center;
 }
-.section_Hero_TEXT {
+.section_Hero_title {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -162,7 +168,7 @@ ul {
   display: inline-block;
   min-width: 200px;
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: none;
   padding: 10px 32px;
 
   font-family: var(--main-font);
@@ -260,7 +266,7 @@ ul {
 .our_project_border {
   border: 1px solid #eeeeee;
   border-top: transparent;
-  padding: 20px 18px;
+  padding: 20px 24px;
   margin-top: -3px;
 }
 
@@ -377,8 +383,15 @@ ul {
 .our_team_list {
   display: flex;
 }
+.our_team_item {
+  background: #ffffff;
 
-.our_team_1:not(:last-child) {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our_team_item:not(:last-child) {
   margin-right: 30px;
 }
 .our_team_work {
@@ -437,7 +450,7 @@ ul {
   margin-top: 20px;
 }
 
-.location {
+.location_item {
   margin-top: 9px;
 
   font-family: var(--main-font);
@@ -448,8 +461,11 @@ ul {
 
   color: var(--main-background-color);
 }
+.location_item:not(:last-child) {
+  margin-bottom: 9px;
+}
 
-.mail {
+.mail_item {
   margin-top: 9px;
 
   font-family: var(--main-font);
@@ -461,7 +477,7 @@ ul {
   color: var(--adress-color);
 }
 
-.tel {
+.tel_item {
   margin-top: 9px;
 
   font-family: var(--main-font);
@@ -473,15 +489,15 @@ ul {
   color: var(--adress-color);
 }
 
-.location:hover,
-.location:focus {
+.location_item:hover,
+.location_item:focus {
   color: var(--hover-color);
 }
-.mail:hover,
-.mail:focus {
+.mail_item:hover,
+.mail_item:focus {
   color: var(--hover-color);
 }
-.tel:hover,
-.tel:focus {
+.tel_item:hover,
+.tel_item:focus {
   color: var(--hover-color);
 }
